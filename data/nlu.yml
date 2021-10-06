@@ -6,10 +6,12 @@ nlu:
     - hey
     - hello
     - hi
+    - hi there
+    - hi you
     - hello there
     - good morning
     - good evening
-    - moin
+    - morning
     - hey there
     - let's go
     - hey dude
@@ -19,10 +21,10 @@ nlu:
 
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
+    - goodbye
+    - see yah
     - good by
-    - cee you later
+    - see you later
     - good night
     - bye
     - goodbye
@@ -91,6 +93,25 @@ nlu:
     - what do you go by?
     - tell me your name
     - what should i call you?
+    - you?
+    - what about you?
+
+- intent: my_name
+  examples: |
+    - my name is [Vallary]{"entity":"name","value":"Vallary" }
+    - my name is [Jade]{"entity":"name","value":"Jade" }
+    - my name is [Paul]{"entity":"name","value":"Paul" }
+    - [Vallary] {"entity":"name","value":"Vallary" } is my name
+    - people call me [Vallary]{"entity":"name","value":"Vallary" }
+    - [Vallary]{"entity":"name","value":"Vallary" } here
+
+- intent: phone_number
+  examples: |
+    - my phone number is [0717890764]{"entity":"number"}
+    - my number is [0717890764]{"entity":"number"}
+    - [0717890764]{"entity":"number"} is my number
+    - [0717890764]{"entity":"number"}
+  
     
 - intent: bot_challenge
   examples: |

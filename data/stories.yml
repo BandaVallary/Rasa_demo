@@ -1,7 +1,6 @@
 version: "2.0"
 
 stories:
-
 - story: happy path
   steps:
   - intent: greet
@@ -28,10 +27,22 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+# use ctrl+k+c to comment a block of code.
+# - story: ask name path
+#   steps:
+#   - intent: ask_name
+#   - action: utter_name
+#   - action: utter_my_name
+#   - intent: my_name
+#     entities:
+#      - name: "Vallary"
+#   - slot_was_set:
+#      - name: "Vallary"
+#   - action: utter_phone_number
+#   - intent: phone_number
+#     entities:
+#       - number: "0717890764" 
+#   - slot_was_set: 
+#       - number: "0717890764"
+#   - action: utter_thanks
 
-- story: ask name path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_name
-  - action: utter_name

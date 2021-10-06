@@ -9,8 +9,28 @@ intents:
   - mood_unhappy
   - bot_challenge
   - ask_name
+  - my_name:
+     use_entities:
+      - name
+  - phone_number:
+     use_entities:
+      - number
+
+entities: 
+  - name
+  - number
+
+slots:
+  name:
+    type: text
+  number:
+    type: text
+
 
 responses:
+  utter_intoduction:
+    - text: "Hello, my name is Serenity. I am your AI enabled mental health companion and 
+    I can connect you to a therapist if your want."
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -32,6 +52,24 @@ responses:
 
   utter_name: 
   - text: "My name is Serenity"
+  utter_ask_name:
+   - text: "what is your name?"
+
+  utter_ask_number:
+  - text: "what is your phone number?"
+  utter_thanks:
+   - text: "Thank you for your cooperation."
+actions:
+  - action_submit
+forms:
+  user_details_form:
+    name:
+      - type: from_entity
+        entity: name
+    number:
+      - type: from_entity
+        entity: number
+
 
 session_config:
   session_expiration_time: 60
