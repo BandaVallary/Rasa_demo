@@ -1,2 +1,3 @@
 # Rasa_demo
-my first Rasa project.
+This is my first Rasa framework Project. It's intention is to build a 
+mental health chatbot.
