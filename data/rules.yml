@@ -13,4 +13,27 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
   #create rules to activate and deactivate forms.
-  
+- rule: Activate form
+  steps: 
+  - intent: ask_name
+  - action: utter_name
+  - action: user_details_form
+  - active_loop: user_details_form
+
+- rule: Submit Form
+  condition: 
+      # on condition that the form is active
+  - active_loop: user_details_form
+    steps: 
+      # steps for deactivating
+    - action: user_details_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+
+    - action: action_submit
+
+- rule: out-of-scope
+  steps:
+  - intent: nlu_fallback
+  - action: utter_out_of_scope

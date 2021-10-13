@@ -10,6 +10,7 @@
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
+from rasa_sdk.events import SlotSet, EventType
 from rasa_sdk.executor import CollectingDispatcher
 
 class ValidateRestaurantForm(Action):
@@ -36,6 +37,7 @@ class ActionSubmit(Action):
             domain: "DomainDict",
     ) -> List[Dict[Text, any]]:
         dispatcher.utter_message(template= "utter_details_thanks",
-        Name= tracker.get_slot("name"), Phone_number= tracker.get_slot("number") )
+        Name= tracker.get_slot("name"), 
+        Phone_number= tracker.get_slot("number") )
 
 

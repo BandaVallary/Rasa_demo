@@ -15,6 +15,7 @@ intents:
   - phone_number:
      use_entities:
       - number
+  - out_of_scope
 
 entities: 
   - name
@@ -52,6 +53,7 @@ responses:
 
   utter_name: 
   - text: "My name is Serenity"
+
   utter_ask_name:
    - text: "what is your name?"
 
@@ -59,12 +61,15 @@ responses:
   - text: "what is your phone number?"
   utter_thanks:
    - text: "Thank you for your cooperation."
+  utter_details_thanks:
+    - text: "Thank you!"
+  utter_out_of_scope: "Sorry, I didn't get that" 
 actions:
   - action_submit
 forms:
   user_details_form:
     name:
-      - type: from_entity
+      - type: from_entity # we also have from_intent, from_text
         entity: name
     number:
       - type: from_entity

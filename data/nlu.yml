@@ -119,3 +119,9 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: out_of_scope
+  examples:
+  - i want to order food
+  - who is the president of kenya
+  - what is 3+2?
