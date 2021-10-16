@@ -89,6 +89,8 @@ nlu:
 - intent: ask_name
   examples: |
     - what is your name?
+    - what's your name?
+    - yours?
     - what do others call you?
     - what do you go by?
     - tell me your name
@@ -120,8 +122,57 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+
 - intent: out_of_scope
-  examples:
-  - i want to order food
-  - who is the president of kenya
-  - what is 3+2?
+  examples: |
+    - i want to order food
+    - who is the president of kenya
+    - what is 3+2?
+
+- intent: depression
+  examples: |
+    - I feel empty,absent minded
+    - I feel like am alone in this world
+    - I feel low and out of place
+    - What should i do to get out of depression?
+    - Why is everything so hard to deal with in this life
+    - I feel emotionally overwhelmed 
+    -  I feel very low and at times 
+    - I feel so discouraged with life
+    - Life is just hard
+    - I feel like giving up
+    - I need to talk to a friend.
+    - I feel so low, what can I do?
+    - Why is life is unfair
+    - Why is life so difficult?
+    - I am sad
+    - I feel stressed and hopeless
+    - I feel abandoned and lonely
+    - I am overwhelmed by life.
+    - Why do bad things always happen to me?
+    - I feel things were not going my way and feel like giving up
+    - I feel like I have wasted my life
+    -  I feel so low and I want to isolate myself 
+
+- intent: suicide
+  examples: |
+    - Why am I alive?
+    - I am just tired
+    - Is suicide the best remedy?
+    - ways in which one can do to control the thoughts of suicide
+    - ways in which one can do to control the thoughts of suicide
+    - How to handle suicide and incidencesof suicide to youths
+    - Is suicide really the best method of solving a problem
+    - What is the effect of not talking to someone when feeling suicidal
+    - What is the meaning of life?
+    - Is suicide the solution?
+    - Is there any importance of living again? Why live with no love from those who surround you?
+    - How to stop thinking about suicide
+    - What are the causes of suicide
+    - How do I make it go away?
+    - I feel suicidal but dont know who to talk to
+    - Why all this challenges had to come my way where no one thought of me
+    - I dont deserve to be alive 
+    - Why do I suffer?
+    - Why is life so difficult?
+

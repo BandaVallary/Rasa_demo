@@ -14,24 +14,25 @@ rules:
   - action: utter_iamabot
   #create rules to activate and deactivate forms.
 - rule: Activate form
-  steps: 
-  - intent: ask_name
+  steps:
+  - intent: tell_name
   - action: utter_name
+  - action: ask_name
   - action: user_details_form
   - active_loop: user_details_form
 
-- rule: Submit Form
-  condition: 
-      # on condition that the form is active
+- rule: Submit form
+  condition:
+  # Condition that form is active.
   - active_loop: user_details_form
-    steps: 
-      # steps for deactivating
-    - action: user_details_form
-    - active_loop: null
-    - slot_was_set:
-      - requested_slot: null
-
-    - action: action_submit
+  steps:
+  # Form is deactivated
+  - action: user_details_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: action_submit
 
 - rule: out-of-scope
   steps:

@@ -9,6 +9,8 @@ intents:
   - mood_unhappy
   - bot_challenge
   - ask_name
+  - depression
+  - suicide
   - my_name:
      use_entities:
       - name
@@ -29,9 +31,6 @@ slots:
 
 
 responses:
-  utter_intoduction:
-    - text: "Hello, my name is Serenity. I am your AI enabled mental health companion and 
-    I can connect you to a therapist if your want."
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -63,7 +62,8 @@ responses:
    - text: "Thank you for your cooperation."
   utter_details_thanks:
     - text: "Thank you!"
-  utter_out_of_scope: "Sorry, I didn't get that" 
+  utter_out_of_scope:
+  - text: "Sorry, I didn't get that" 
 actions:
   - action_submit
 forms:
